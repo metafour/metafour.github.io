@@ -1,0 +1,83 @@
+body {
+  /* padding: 2em; */
+  background-color: #efefef;
+  padding-bottom: 0px;
+}
+
+hr {
+  border-color: #aaa;
+  border-width: 2px 0px;
+}
+
+footer {
+  background: #ddd;
+  color: #444;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+footer a {
+  color: #eee;
+}
+
+footer a:hover {
+  color: #eee;
+}
+
+.site-logo {
+  font-family: 'Roboto Slab', serif;
+}
+
+.github, .twitter {
+  text-decoration: none;
+}
+
+.github a, .twitter a {
+  color: white;
+}
+
+.mobile-header {
+  margin-left: 2em;
+}
+
+.mobile-header h2 a {
+  color: #000;
+}
+
+.mobile-header a:hover {
+  text-decoration: none;
+}
+
+.header {
+  width: 275px;
+  padding-right: 3em;
+}
+
+.header h2 a {
+  color: #000;
+}
+
+.header a:hover {
+  text-decoration: none;
+}
+
+.post {
+  padding-left: 2em;
+  margin-bottom: 6em;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.ios-widget {
+  padding-top: 7em;
+  margin-right: 1em;
+}
+
+.post h1 a {
+  color: #6A5ACD;
+  font-family: 'Roboto Slab', serif;
+}
+
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+  font-family: 'Roboto Slab', serif;
+}
+

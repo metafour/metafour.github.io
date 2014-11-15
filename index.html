@@ -1,23 +1,63 @@
 ---
-layout: default
 ---
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans|Roboto+Slab' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/custom.css">
+		<link rel="stylesheet" href="/css/syntax.css">
+		<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="/css/custom.js"></script>
+    <script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '10lNph']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
+    <title>{{site.name}}</title>
+  </head>
 
-<div class="home">
+  <body>
+    <!-- <nav class="navbar navbar-static-top navbar-inverse hidden-md hidden-lg"> -->
+      <div class="row hidden-md hidden-lg mobile-header">
+      <div class="container-fluid">
+        <span><h2 class="site-logo"><a href={{site.url}}>metafour<small>.org</small></a></h2></span>
+        &nbsp;<div class="label label-info twitter"><img src="/images/twitter-bird-dark-bgs-no-padding.png" alt="Follow me on Twitter" height=12 width=12> <a href="http://twitter.com/metafour">@metafour</a></div>
+      </div>
+      </div>
+      <!-- </nav> -->
 
-  <h1 class="page-heading">Posts</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          <div data-spy="affix" class="header hidden-xs hidden-sm">
+            <h2 class="site-logo"><a href={{site.url}}>metafour<small>.org</small></a></h2><br />
+            <span class="label label-info twitter"><img src="/images/twitter-bird-dark-bgs-no-padding.png" alt="Follow me on Twitter" height=12 width=12> <a href="http://twitter.com/metafour">@metafour</a></span>
+            <span class="label label-default github"><img src="/images/GitHub-Mark-32px.png" alt="Github" height=12 width=12> <a href="http://github.com/metafour">metafour</a></span>
+          </div>
+        </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <div class="col-md-7">
+          {% comment %} start of posts {% endcomment %}
+          {% for post in site.posts %}
+            <div class="post">
+              <h1><a href={{post.url}} class="permalink">{{post.title}}</a></h1>
+              <h6 class="post-datetime">{{post.month}}, {{post.day}} {{post.year}} @ {{post.time}}</h6>
+              <p>{{post.content}}</p>
+              <p class="categories">{{post.categories}}</p>
+              <hr />
+            </div>
+          {% endfor %}
+        </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        <div class="col-md-3">
+          <div class="ios-widget"><iframe src="https://widgets.itunes.apple.com/widget.html?c=us&brc=EFEFEF&blc=EFEFEF&trc=EFEFEF&tlc=EFEFEF&d=Currently on my home screen...&t=iOS Applications&m=software&e=software,iPadSoftware&w=250&h=300&ids=568903335,888422857,911364254,697846300,288545208,718043190,421706526,722294701,655895325&wt=playlist&partnerId=&affiliate_id=&at=10lNph&ct=" frameborder=0 style="overflow-x:hidden;overflow-y:hidden;width:250px;height: 300px;border:0px"></iframe></div>
+        </div>
+      </div>
+    </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    {% include footer.html %}
 
-</div>
+  </body>
+
+</html>
